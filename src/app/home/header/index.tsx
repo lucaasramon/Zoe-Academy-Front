@@ -8,13 +8,14 @@ import Menu from "@mui/material/Menu";
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
-import Image from "next/image";
+// import Image from "next/image";
 import WorkspacePremiumOutlinedIcon from '@mui/icons-material/WorkspacePremiumOutlined';
-import { BootstrapButton } from "@/app/components/bootstrapButton";
+import { BootstrapButton } from "../../../app/components/bootstrapButton";
+import SupervisorAccountOutlinedIcon from '@mui/icons-material/SupervisorAccountOutlined';
+import Link from "@mui/material/Link";
 
 const pages = ["Modulos", "Certificados", "Contato"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -34,23 +35,23 @@ function ResponsiveAppBar() {
     <AppBar
       position="static"
       sx={{
-        background: "#010200",
+        background: "#262626",
         padding: 2,
       }}
     >
       <Container maxWidth="xl">
         <Toolbar>
-          <Image
+          {/* <Image
             src="/logo-zoe-academy.png"
             alt="Minha Imagem"
             width={70}
             height={60}
-          />
+          /> */}
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/Home"
             sx={{
               mr: 5,
               display: { xs: "none", md: "flex" },
@@ -66,15 +67,31 @@ function ResponsiveAppBar() {
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <BootstrapButton 
+              startIcon={<SupervisorAccountOutlinedIcon />}
+              disableRipple
+              variant="contained" 
+              onClick={() => {}}
+              sx={{
+                color: "#262626",
+                background: "#FFD700",
+                "&:hover": {
+                  backgroundColor: "#FFEB3B",
+                },
+                margin: 1,
+              }}
+            >
+              Administrador 
+            </BootstrapButton >
+            <BootstrapButton 
               startIcon={<SchoolOutlinedIcon />}
               disableRipple
               variant="contained" 
               onClick={() => {}}
               sx={{
-                color: "black",
-                background: "yellow",
+                color: "#262626",
+                background: "#FFD700",
                 "&:hover": {
-                  backgroundColor: "#dddd15",
+                  backgroundColor: "#FFEB3B",
                 },
                 margin: 1,
               }}
@@ -88,33 +105,34 @@ function ResponsiveAppBar() {
               variant="contained" 
               onClick={() => {}}
               sx={{
-                color: "black",
-                background: "yellow",
+                color: "#262626",
+                background: "#FFD700",
                 "&:hover": {
-                  backgroundColor: "#dddd15",
+                  backgroundColor: "#FFEB3B",
                 },
                 margin: 1,
               }}
             >
               Certificados
             </BootstrapButton >
-
+            <Link href="/Contact" variant="body2">
             <BootstrapButton 
               startIcon={<LocalPhoneOutlinedIcon />}
               disableRipple
-              variant="outlined" 
+              variant="contained" 
               onClick={() => {}}
               sx={{
-                color: "white",
-                background: "transparent",
+                color: "#262626",
+                background: "#FFD700",
                 "&:hover": {
-                  backgroundColor: "gray",
+                  backgroundColor: "#FFEB3B",
                 },
                 margin: 1,
               }}
-            >
+              >
               Contatos
             </BootstrapButton >
+              </Link>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>

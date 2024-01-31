@@ -8,22 +8,16 @@ import CourseCard from "../components/courseCard";
 
 export default function Home() {
   return (
-    <div className="Home">
-      <ResponsiveAppBar />
-      <Card
-        sx={{
-          background: "transparent",
-          padding: 4,
-          marginLeft: 6,
-        }}
-      >
+    <div style={{padding: "40px"}}>
+      
+      
         <Typography
           gutterBottom
           variant="h1"
           fontSize="40px"
           sx={{
             fontWeight: 600,
-            color: "white",
+            color: "#262626",
           }}
         >
           Módulos
@@ -33,7 +27,7 @@ export default function Home() {
           image="/curso-fundamentos.jpg"
           description="Descrição do curso é feito aqui"
         />
-      </Card>
+      
     </div>
   );
 }

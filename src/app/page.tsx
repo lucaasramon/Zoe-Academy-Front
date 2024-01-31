@@ -1,10 +1,10 @@
 import * as React from 'react';
-import SignIn from "./login/login"; // Importe o componente de login
+import Routers from "../routes"; // Importe o componente de login
 
 function App() {
   return (
     <div className="App">
-      <SignIn />
+      <Routers />
     </div>
   );
 }

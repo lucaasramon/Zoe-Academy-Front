@@ -8,7 +8,7 @@ export const BootstrapButton = styled(Button)({
     fontSize: 14,
     padding: '6px 30px',
     lineHeight: 2,
-    backgroundColor: '#0063cc',
+    backgroundColor: '#FFD700',
     fontFamily: [
       'sans-serif',
       '"Apple Color Emoji"',
